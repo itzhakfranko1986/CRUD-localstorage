@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="main.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    />
-    <title>Personalizar notícias</title>
-  </head>
-  <body>
-    <main class="channel">
-      <form class="form" action="/">
-        <input
-          placeholder="Nome do menu"
-          class="form__input"
-          data-form="name-menu"
-          type="text"
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="main.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         />
-        <input
-          placeholder="Categoria"
-          class="form__input"
-          data-form="category"
-          type="text"
-        />
-        <div class="form__footer">
-          <button class="form__btn form__btn-submit" type="submit">
-            Adicionar
-          </button>
-          <button class="form__btn form__btn-edit" type="button">
-            Editar
-          </button>
-        </div>
-      </form>
-      <table class="table">
-        <thead>
-          <tr>
-            <td>Nome do menu</td>
-            <td>Categoria</td>
-          </tr>
-        </thead>
-        <tbody class="tbody"></tbody>
-      </table>
-    </main>
-  </body>
+        <title>Personalizar notícias</title>
+    </head>
+    <body>
+        <main class="channel">
+            <form class="form" action="/">
+                <input
+                    placeholder="Nome do menu"
+                    class="form__input"
+                    data-form="name-menu"
+                    type="text"
+                    autofocus
+                />
+                <input
+                    placeholder="Categoria"
+                    class="form__input"
+                    data-form="category"
+                    type="text"
+                />
+                <div class="form__footer">
+                    <button class="form__btn form__btn-submit" type="submit">
+                        Adicionar
+                    </button>
+                    <button class="form__btn form__btn-edit" type="button">
+                        Editar
+                    </button>
+                </div>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Nome do menu</td>
+                        <td>Categoria</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody class="tbody"></tbody>
+            </table>
+        </main>
+    </body>
 
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </html>
