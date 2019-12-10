@@ -23,7 +23,8 @@
             .then((res) => {
                 res.text().then((result) =>
                     JSON.parse(result).articles.map(
-                        (news) => (sectionNews.innerHTML += renderNews(news))
+                        (news, index) =>
+                            (sectionNews.innerHTML += renderNews(news, index))
                     )
                 );
             })
@@ -44,21 +45,27 @@
         );
     }
 
-    function renderNews(news) {
+    function renderNews(news, id) {
         return ` <article class="card" id="article">
+        <div class="count-news">
+            <span>${id + 1}</span>
+        </div>
+        <div>
 
     <img class="card__image" src="${
         news.urlToImage
             ? news.urlToImage
             : "https://www.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg"
     }"/>
-    <div>
+    <div class="card-infos">
       <h2 class="card__title">${news.title}</h2>
       <p class="card__description">${
           news.description ? news.description : ""
       }</p>
+      <p class="card__author"> ${news.author ? news.author : "Desconhecido"}</p>
+
     </div>
-    <p class="card__author"> ${news.author ? news.author : "Desconhecido"}</p>
+        </div>
     </article>
     `;
     }
