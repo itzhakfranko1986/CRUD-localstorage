@@ -102,6 +102,7 @@
 
         categories = JSON.parse(window.localStorage.getItem("categories"));
         showCategories();
+        clearInputs();
     };
 
     window.onEditCategory = (e) => {
