@@ -19,13 +19,31 @@
                 >
                 <select class="header__select" id="MENU"></select>
             </div>
-            <h1 class="header__title">Feed de notícias</h1>
             <a class="header__btn-redirect" href="/canais.html"
                 >Personalizar <span class="fas fa-arrow-right"></span
             ></a>
         </header>
+        <h1 class="header__title">Feed de notícias</h1>
         <i class="fas fa-spinner fa-spin"></i>
         <section class="section-news"></section>
+        <section class="empty-state">
+            <img
+                class="empty-state__img"
+                src="public/empty-filters.svg"
+                alt="Sem filtros cadastrados"
+            />
+            <h2 class="empty-state__title">
+                Sem filtros personalizados cadastrados
+            </h2>
+            <h3 class="empty-state__subtitle">
+                Cadastre um filtro para ver sua notícias favoritas 🥳
+            </h3>
+            <button class="empty-state__btn">
+                <a class="" href="/canais.html"
+                    >Cadastrar filtro <span class="fas fa-plus"></span
+                ></a>
+            </button>
+        </section>
     </body>
 
     <script src="api.js"></script>

@@ -4,16 +4,18 @@
     const menu = document.querySelector("select");
     const sectionNews = document.querySelector(".section-news");
     const spinner = document.querySelector(".fa-spinner");
-
+    const emptyState = document.querySelector(".empty-state");
     menu.innerHTML = renderOptions();
-
-    configRequest(menu[0].value);
 
     menu.addEventListener("change", () => {
         const query = menu.options[menu.selectedIndex].value;
         sectionNews.innerHTML = "";
         configRequest(query);
     });
+
+    JSON.parse(window.localStorage.getItem("categories")).length > 0
+        ? configRequest(menu[0].value)
+        : (emptyState.style.display = "flex");
 
     function configRequest(query) {
         const url = `https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&language=pt&apiKey=${apiKey}`;

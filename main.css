@@ -21,7 +21,7 @@ body {
     max-height: 100vh;
     overflow-y: auto;
     padding: 0 16px;
-    padding-bottom: 91px;
+    padding-bottom: 126px;
 }
 .form {
     display: flex;
@@ -113,6 +113,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 16px;
+    padding-bottom: 0;
 }
 .header__select-container {
     display: flex;
@@ -178,6 +179,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 22px;
+    margin: 8px 0;
 }
 .fa-arrow-right {
     margin-left: 4px;
@@ -249,4 +251,44 @@ td {
 }
 .show {
     visibility: visible;
+}
+.empty-state {
+    max-width: 350px;
+    margin: 64px auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    display: none;
+    z-index: 2;
+    bottom: 70px;
+}
+.empty-state__img {
+    width: 100%;
+}
+.empty-state__title {
+    color: #fabd3c;
+    text-align: center;
+    font-size: 18px;
+}
+.empty-state__subtitle {
+    color: #eaeaf3;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 16px 0;
+}
+.empty-state__btn {
+    cursor: pointer;
+    outline: 0;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #fabd3c;
+    background: #fabd3c;
+    color: #112d47;
+    font-weight: bold;
+}
+.empty-state__btn > a {
+    color: #112d47;
+    text-decoration: none;
 }
