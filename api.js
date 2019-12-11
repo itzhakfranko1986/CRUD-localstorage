@@ -13,6 +13,7 @@
         configRequest(query);
     });
 
+    JSON.parse(window.localStorage.getItem("categories")) &&
     JSON.parse(window.localStorage.getItem("categories")).length > 0
         ? configRequest(menu[0].value)
         : (emptyState.style.display = "flex");
@@ -40,11 +41,13 @@
             window.localStorage.getItem("categories")
         );
 
-        return categories.map(
-            (category) => `
+        return categories
+            ? categories.map(
+                  (category) => `
         <option value="${category.category}">${category.menuName}</option>
       `
-        );
+              )
+            : null;
     }
 
     function renderNews(news, id) {
